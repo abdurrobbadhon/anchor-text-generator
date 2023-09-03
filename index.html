@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor Text Generator Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Anchor Text Generator</h1>
+        <div class="input-box">
+            <label for="keywords">Keywords (one per line, 400 max):</label>
+            <textarea id="keywords"></textarea>
+        </div>
+        <div class="input-box">
+            <label for="urls">URLs (one per line, 400 max):</label>
+            <textarea id="urls"></textarea>
+        </div>
+        <div class="options">
+            <div class="checkbox">
+                <input type="checkbox" id="newWindow">
+                <label for="newWindow">Open link in new window</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="titleAttribute">
+                <label for="titleAttribute">Add title attribute to the link</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="noFollow">
+                <label for="noFollow">Make It No Follow</label>
+            </div>
+            <div class="custom-rel">
+                <label for="customRel">Custom rel attribute:</label>
+                <input type="text" id="customRel" placeholder="e.g. sponsored">
+            </div>
+        </div>
+        <div class="options">
+            <div class="radio">
+                <input type="radio" id="oneLink" name="linkType" checked>
+                <label for="oneLink">Create one link for each URL</label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="allLinks" name="linkType">
+                <label for="allLinks">Create all the links for each keyword</label>
+            </div>
+        </div>
+        <button id="generateBtn" onclick="generateLinks()">Generate</button>
+        <div class="output-box">
+            <label for="output">Generated Code:</label>
+            <textarea id="output"></textarea>
+        </div>
+        <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        <div class="rich-text-box" id="richTextBox"></div>
+        <button onclick="copyRichText()">Copy Rich Text</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
