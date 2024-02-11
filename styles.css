@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f5f7fa;
@@ -14,7 +13,7 @@ body {
     width: 90%;
     max-width: 550px;
     background: linear-gradient(135deg, #ece9e6, #ffffff);
-    padding: 20px 20px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
     overflow: hidden;
@@ -24,12 +23,14 @@ body {
 
 h1 {
     text-align: center;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
     color: #333;
     font-weight: 700;
 }
 
-.input-box, .output-box, .rich-text-box {
+.input-box,
+.output-box,
+.rich-text-box {
     margin: 12px 0;
 }
 
@@ -39,13 +40,15 @@ label {
     font-weight: 500;
 }
 
-textarea, .rich-text-box {
+textarea,
+.rich-text-box {
     width: 100%;
     height: 130px;
     padding: 8px;
     border-radius: 8px;
     border: 1px solid #d0d4d8;
-    resize: none;
+    resize: both;
+    overflow: auto;
     font-size: 14px;
     transition: border-color 0.3s, box-shadow 0.2s;
 }
@@ -73,73 +76,9 @@ textarea:focus {
     margin: 10px 0;
 }
 
-.checkbox, .radio {
-    flex: 1;
-    font-size: 14px;
-}
-
-button {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 12px 0;
-    font-weight: 500;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
-}
-
-button:active {
-    transform: scale(0.97);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-14px;
-    transition: border-color 0.3s, box-shadow 0.2s;
-}
-
-textarea:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
-}
-
-.rich-text-box {
-    background: #f5f5f5;
-    overflow-y: auto;
-    transition: background-color 0.3s;
-}
-
-.rich-text-box:hover {
-    background-color: #e9ecef;
-}
-
-.options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 10px 0;
-}
-
-.checkbox, .radio, .custom-rel {
+.checkbox,
+.radio,
+.custom-rel {
     flex: 1;
     font-size: 14px;
 }
@@ -169,7 +108,8 @@ button:hover {
     transform: scale(1.05);
 }
 
-.output-box, .rich-text-box {
+.output-box,
+.rich-text-box {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
@@ -196,10 +136,4 @@ button:hover {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Allow vertical resizing of textareas */
-textarea {
-    resize: both;
-    overflow: auto;
 }
